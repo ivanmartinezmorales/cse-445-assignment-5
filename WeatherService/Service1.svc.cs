@@ -5,16 +5,32 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace WeatherService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        private string apiKey = "9c358ce4606b4993c8ae45efda970328";
+        public string[] Weather5day(int zipCode)
         {
-            return string.Format("You entered: {0}", value);
+            string url = String.Format(
+                "http://api.openweathermap.org/data/2.5/forecast?zip={0},us&appid={1}", 
+                zipCode, 
+                apiKey);
+
+            List<string> details = new List<string>();
+            JObject jsonData;
+            using (var client = new System.Net.WebClient())
+            {
+                jsonData = JObject.Parse(client.DownloadString(url));
+                if (jsonData.SelectToken("cod").ToString() == "200")
+                {
+
+                }
+            }
+
+            return details.ToArray();
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
@@ -29,5 +45,6 @@ namespace WeatherService
             }
             return composite;
         }
+
     }
 }
