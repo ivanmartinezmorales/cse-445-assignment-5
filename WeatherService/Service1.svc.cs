@@ -15,8 +15,8 @@ namespace WeatherService
         public string[] Weather5day(int zipCode)
         {
             string url = String.Format(
-                "http://api.openweathermap.org/data/2.5/forecast?zip={0},us&appid={1}", 
-                zipCode, 
+                "http://api.openweathermap.org/data/2.5/forecast?zip={0},us&appid={1}",
+                zipCode,
                 apiKey);
 
             List<string> details = new List<string>();
@@ -24,10 +24,11 @@ namespace WeatherService
             using (var client = new System.Net.WebClient())
             {
                 jsonData = JObject.Parse(client.DownloadString(url));
-                if (jsonData.SelectToken("cod").ToString() == "200")
-                {
+            }
+            if (jsonData.SelectToken("cod").ToString() == "200")
+            {
+                Console.WriteLine(jsonData.ToString());
 
-                }
             }
 
             return details.ToArray();
