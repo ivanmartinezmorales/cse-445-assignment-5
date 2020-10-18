@@ -1,33 +1,85 @@
 ﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.ServiceModel.Dispatcher;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 
 namespace NewsFocusService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
-        }
+        private string ApiKey = "9817979e2153476195e572b32724e9d9";
+        private string BaseUrl = "https://newsapi.org/v2";
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+
+        public string[] NewsFocus(string[] topics)
         {
-            if (composite == null)
+
+            List<string> returnUrls = new List<string>();
+            List<Root> returnedTopics = new List<Root>();
+            using (var client = new System.Net.WebClient())
             {
-                throw new ArgumentNullException("composite");
+                foreach (var topic in topics)
+                {
+                    var response = JsonConvert.
+                        DeserializeObject<Root>(
+                        client.DownloadString(
+                            String.Format(
+                                "https://newsapi.org/v2/everything?q={1}&pageSize=5&apiKey={2}", 
+                                BaseUrl, 
+                                topic, 
+                                ApiKey)));
+
+                    if (response.Status == "ok")
+                        returnedTopics.Add(response);
+                }
+
+                foreach (var item in returnedTopics)
+                {
+                    try
+                    {
+                    foreach (var o in item.Articles)
+                    {
+                        returnUrls.Add(o.Url);
+                    }
+
+                    } catch (Exception e)
+                    {
+                        continue;
+                    }
+
+                }
             }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+
+            return returnUrls.ToArray();
         }
     }
+
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+    public class Source
+    {
+        public object Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    public class Article
+    {
+        public Source Source { get; set; }
+        public string Author { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Url { get; set; }
+        public string UrlToImage { get; set; }
+        public DateTime? PublishedAt { get; set; }
+        public string Content { get; set; }
+    }
+
+    public class Root
+    {
+        public string Status { get; set; }
+        public int TotalResults { get; set; }
+        public List<Article> Articles { get; set; }
+    }
+
+
 }
