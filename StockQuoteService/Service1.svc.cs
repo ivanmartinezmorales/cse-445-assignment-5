@@ -15,8 +15,7 @@ namespace StockQuoteService
     {
         public string[] getStockData(string ticker)
         {
-            var baseAddress = new Uri("https://cloud.iexapis.com");
-            var Token = "?token=pk_e96bc5b439e149dc9f58c081bffffc88";
+            var Token = "sk_b4389e518e8349f88b8c50a8e7839017";
 
             string url = String.Format(
                 "https://cloud.iexapis.com/stable/stock/{0}/quote?token={1}",
@@ -29,11 +28,16 @@ namespace StockQuoteService
             {
                 jsonData = JObject.Parse(client.DownloadString(url));
             }
-            if (jsonData.SelectToken("cod").ToString() == "200")
+            
+            details.Add(jsonData.SelectToken("companyName").ToString());
+            details.Add(jsonData.SelectToken("open").ToString());
+            // Might need to check if ticker is correct or not
+            
+            /*if (jsonData.SelectToken("cod").ToString() == "200")
             {
                 Console.WriteLine(jsonData.ToString());
 
-            }
+            }*/
 
             return details.ToArray();
         }
