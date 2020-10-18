@@ -16,28 +16,25 @@ namespace CrimeDataService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public string responseData;
-        public string getCrimeData(string lon, string lat)
+        
+        public int getCrimeData(double lon, double lat)
         {
-            getData(lon, lat);
-            
-            return this.responseData;
-        }
+            // Another API KEY
+            // qOrZ6nWzlRHJjZ0xnM7uyejSvM066s1HIPWoMF5f
+            string url = "https://api.usa.gov/crime/fbi/sapi/api/nibrs/rape/offender/states/AZ/count?API_KEY=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv";
 
-            public async void getData(string lon, string lat)
-        {
-
-            var baseAddress = new Uri("https://data.police.uk/");
-
-            using (var httpClient = new HttpClient { BaseAddress = baseAddress })
+            List<string> details = new List<string>();
+            JObject jsonData;
+            using (var client = new System.Net.WebClient())
             {
-                using (var response = await httpClient.GetAsync("api/stops-street?lat=52.629729&lng=-1.131592&date=2018-06"))
-                {
-
-                    this.responseData = await response.Content.ToString();
-                }
+                jsonData = JObject.Parse(client.DownloadString(url));
             }
+            string s = jsonData["data"][0]["value"].ToString();
+            
+            return Int32.Parse(s);
         }
+
+         
 
     }
 }
