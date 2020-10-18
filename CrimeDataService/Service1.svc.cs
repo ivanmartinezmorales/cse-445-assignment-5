@@ -21,23 +21,20 @@ namespace CrimeDataService
         {
             getData(lon, lat);
             
-            return responseData;
+            return this.responseData;
         }
 
             public async void getData(string lon, string lat)
         {
-            
-             var baseAddress = new Uri("https://api.crimeometer.com/");
+
+            var baseAddress = new Uri("https://data.police.uk/");
 
             using (var httpClient = new HttpClient { BaseAddress = baseAddress })
             {
-
-                httpClient.DefaultRequestHeaders.TryAddWithoutValidation("x-api-key", "Nn3Pm4bq7kt4F2H9sgvT3i2eZCH10RI97Pz6mnr2");
-
-                using (var response = await httpClient.GetAsync($"v1/incidents/raw-data?lat={lat}&lon={lon}&distance=10mi&datetime_ini=2020-01-01&datetime_end=&page="))
+                using (var response = await httpClient.GetAsync("api/stops-street?lat=52.629729&lng=-1.131592&date=2018-06"))
                 {
 
-                    this.responseData = await response.Content.ReadAsStringAsync();
+                    this.responseData = await response.Content.ToString();
                 }
             }
         }
