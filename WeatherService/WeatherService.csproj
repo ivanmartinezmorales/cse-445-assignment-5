@@ -200,6 +200,13 @@
     <Content Include="Service1.svc" />
     <Content Include="StupidWebConfig.config" />
     <None Include="packages.config" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connected Services\WeatherSoapService\Reference.cs">
