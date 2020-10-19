@@ -12,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockQuoteService", "StockQuoteService\StockQuoteService.csproj", "{8BB0BF89-2E22-4FA3-BFB2-C98D5A6EE43D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPages", "DemoPages\DemoPages.csproj", "{6392C6AC-CFAE-4D74-829F-0C87E2DD1B1A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3C7BDD02-0412-4308-8300-CB0904C3B619} = {3C7BDD02-0412-4308-8300-CB0904C3B619}
+		{48DF3A51-F0FB-4302-B97F-2B274905D207} = {48DF3A51-F0FB-4302-B97F-2B274905D207}
+		{8BB0BF89-2E22-4FA3-BFB2-C98D5A6EE43D} = {8BB0BF89-2E22-4FA3-BFB2-C98D5A6EE43D}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

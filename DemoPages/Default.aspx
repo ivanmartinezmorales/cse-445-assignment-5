@@ -2,41 +2,56 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
+    <h1>CSE 445 Group 8 Assignment 5</h1>
+    <table>
+<thead>
+  <tr>
+    <th>Provider Name</th>
+    <th>Service Name</th>
+    <th>Service Link</th>
+    <th>Service Description</th>
+    <th>Resources Used</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Ivan Martinez Morales</td>
+    <td>NewsFocus</td>
+    <td>
+        <asp:HyperLink ID="HyperLInk2" runat="server" NavigateUrl="~/NewsFocus.aspx">News Focus Service</asp:HyperLink>
+    </td>
+    <td>Leverage NewsAPI in order to pull up URLs of articles of different topics</td>
+    <td>NewsAPI</td>
+  </tr>
+  <tr>
+    <td>Ivan Martinez Morales</td>
+    <td>WeatherService</td>
+    <td>
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/WeatherService.aspx">Weather Service</asp:HyperLink>
+      </td>
+    <td>Leverage OpenWeatherAPI to get forecast data</td>
+    <td>OpenWeatherAPI</td>
+  </tr>
+  <tr>
+    <td>Christopher Canales</td>
+    <td>CrimeService</td>
+    <td>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/CrimeServiceDemo.aspx">Crime Data Service</asp:HyperLink>
+        </td>
+    <td>Leverage Crime APIs in order to get crime data for a given lat/lon</td>
+    <td>CrimeAPI</td>
+  </tr>
+  <tr>
+    <td>Christopher Canales</td>
+    <td>StockQuoteService</td>
+    <td>
+        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/StockService.aspx">Stock Service</asp:HyperLink>
+      </td>
+    <td>Leverage open APIs in order to return Stock Quote Data</td>
+    <td>StockAPI</td>
+  </tr>
+</tbody>
+</table>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
 
 </asp:Content>

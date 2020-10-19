@@ -108,10 +108,35 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="CrimeServiceDemo.aspx" />
+    <Content Include="NewsFocus.aspx" />
+    <Content Include="WeatherService.aspx" />
+    <Content Include="StockService.aspx" />
     <None Include="Connected Services\CrimeDataService\Service1.disco" />
     <None Include="Connected Services\CrimeDataService\configuration91.svcinfo" />
     <None Include="Connected Services\CrimeDataService\configuration.svcinfo" />
     <None Include="Connected Services\CrimeDataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\NewsFocusService\Service1.disco" />
+    <None Include="Connected Services\NewsFocusService\configuration91.svcinfo" />
+    <None Include="Connected Services\NewsFocusService\configuration.svcinfo" />
+    <None Include="Connected Services\NewsFocusService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\StockDataService\Service1.disco" />
+    <None Include="Connected Services\StockDataService\configuration91.svcinfo" />
+    <None Include="Connected Services\StockDataService\configuration.svcinfo" />
+    <None Include="Connected Services\StockDataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WeatherService\Service1.disco" />
+    <None Include="Connected Services\WeatherService\configuration91.svcinfo" />
+    <None Include="Connected Services\WeatherService\configuration.svcinfo" />
+    <None Include="Connected Services\WeatherService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -138,6 +163,36 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CrimeDataService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewsFocusService\Service1.wsdl" />
+    <None Include="Connected Services\NewsFocusService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewsFocusService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewsFocusService\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StockDataService\Service1.wsdl" />
+    <None Include="Connected Services\StockDataService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StockDataService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StockDataService\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WeatherService\Service1.wsdl" />
+    <None Include="Connected Services\WeatherService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WeatherService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WeatherService\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -190,6 +245,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\NewsFocusService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\StockDataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WeatherService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -229,6 +299,34 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="CrimeServiceDemo.aspx.cs">
+      <DependentUpon>CrimeServiceDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrimeServiceDemo.aspx.designer.cs">
+      <DependentUpon>CrimeServiceDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsFocus.aspx.cs">
+      <DependentUpon>NewsFocus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsFocus.aspx.designer.cs">
+      <DependentUpon>NewsFocus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeatherService.aspx.cs">
+      <DependentUpon>WeatherService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeatherService.aspx.designer.cs">
+      <DependentUpon>WeatherService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockService.aspx.cs">
+      <DependentUpon>StockService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockService.aspx.designer.cs">
+      <DependentUpon>StockService.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -249,6 +347,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\CrimeDataService\" />
+    <WCFMetadataStorage Include="Connected Services\NewsFocusService\" />
+    <WCFMetadataStorage Include="Connected Services\StockDataService\" />
+    <WCFMetadataStorage Include="Connected Services\WeatherService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
