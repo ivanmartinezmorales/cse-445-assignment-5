@@ -1,0 +1,8 @@
+C:\Users\ivanm\source\repos\cse-445-assignment-5\NewsFocusService\bin\NewsFocusService.dll.config
+C:\Users\ivanm\source\repos\cse-445-assignment-5\NewsFocusService\bin\NewsFocusService.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\NewsFocusService\bin\NewsFocusService.pdb
+C:\Users\ivanm\source\repos\cse-445-assignment-5\NewsFocusService\bin\Newtonsoft.Json.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\NewsFocusService\obj\Release\NewsFocusService.csproj.CoreCompileInputs.cache
+C:\Users\ivanm\source\repos\cse-445-assignment-5\NewsFocusService\obj\Release\NewsFocusService.csproj.CopyComplete
+C:\Users\ivanm\source\repos\cse-445-assignment-5\NewsFocusService\obj\Release\NewsFocusService.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\NewsFocusService\obj\Release\NewsFocusService.pdb
