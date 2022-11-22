@@ -1,0 +1,8 @@
+C:\Users\ivanm\source\repos\cse-445-assignment-5\CrimeDataService\bin\CrimeDataService.dll.config
+C:\Users\ivanm\source\repos\cse-445-assignment-5\CrimeDataService\bin\CrimeDataService.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\CrimeDataService\bin\CrimeDataService.pdb
+C:\Users\ivanm\source\repos\cse-445-assignment-5\CrimeDataService\bin\Newtonsoft.Json.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\CrimeDataService\obj\Release\CrimeDataService.csproj.CoreCompileInputs.cache
+C:\Users\ivanm\source\repos\cse-445-assignment-5\CrimeDataService\obj\Release\CrimeDataService.csproj.CopyComplete
+C:\Users\ivanm\source\repos\cse-445-assignment-5\CrimeDataService\obj\Release\CrimeDataService.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\CrimeDataService\obj\Release\CrimeDataService.pdb

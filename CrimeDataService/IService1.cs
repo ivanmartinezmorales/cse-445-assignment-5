@@ -13,8 +13,7 @@ namespace CrimeDataService
     public interface IService1
     {
         [OperationContract]
-        string getCrimeData(string lon, string lat);
-        [OperationContract]
-        void getData(string lon, string lat);
+       int getCrimeData(double lon, double lat);
+        
     }
 }

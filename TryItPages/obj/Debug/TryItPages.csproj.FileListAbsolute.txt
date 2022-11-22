@@ -1,0 +1,2 @@
+C:\Users\ivanm\source\repos\cse-445-assignment-5\TryItPages\obj\Debug\TryItPages.csprojAssemblyReference.cache
+C:\Users\ivanm\source\repos\cse-445-assignment-5\TryItPages\obj\Debug\TryItPages.csproj.CoreCompileInputs.cache

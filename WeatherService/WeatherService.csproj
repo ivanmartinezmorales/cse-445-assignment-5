@@ -198,8 +198,15 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Service1.svc" />
-    <Content Include="Web.config" />
+    <Content Include="StupidWebConfig.config" />
     <None Include="packages.config" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connected Services\WeatherSoapService\Reference.cs">
@@ -218,11 +225,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\WeatherSoapService\ndfdXMLserver.wsdl" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <None Include="StupidWebConfig.Debug.config">
+      <DependentUpon>StupidWebConfig.config</DependentUpon>
     </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <None Include="StupidWebConfig.Release.config">
+      <DependentUpon>StupidWebConfig.config</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,15 @@
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\StockQuoteService.dll.config
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\StockQuoteService.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\StockQuoteService.pdb
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\Newtonsoft.Json.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\System.Text.Json.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\System.Memory.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\System.Text.Encodings.Web.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\System.Numerics.Vectors.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\obj\Release\StockQuoteService.csproj.CoreCompileInputs.cache
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\obj\Release\StockQuoteService.csproj.CopyComplete
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\obj\Release\StockQuoteService.dll
+C:\Users\ivanm\source\repos\cse-445-assignment-5\StockQuoteService\obj\Release\StockQuoteService.pdb
